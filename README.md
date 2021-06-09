@@ -1,24 +1,65 @@
-# README
+# TABLE DESIGN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
+| Column             | Type    | Options                       |
+| ------------------ | ------- | ----------------------------- |
+| certificate_number | string  | null: false, uniqueness: true |
+| email              | string  | null: false                   |
+| encrypted_password | string  | null: false                   |
+| last_name          | string  | null: false                   |
+| first_name         | string  | null: false                   |
+| last_name_kana     | string  | null: false                   |
+| first_name_kana    | string  | null: false                   |
+| department_id      | integer | null: false                   |
+| sex_id             | integer | null: false                   |
+| position_id        | integer | null: false                   |
+| profile            | text    |                               |
 
-Things you may want to cover:
+- has_many :articles
 
-* Ruby version
+## articles
+| Columns | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| title   | string     | null: false                    |
+| content | text       | null: false                    |
+| user    | references | null: false, foreign_key: true |
 
-* System dependencies
+- belongs_to: user
+- has_many: article_department_relations
+- has_many: departments, through: article_department_relations
+- has_many: article_tag_relations
+- has_many: tags, through: article_tag_relations
 
-* Configuration
+## article_department_relations
+| Columns    | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| article    | references | null: false, foreign_key: true |
+| department | references | null: false, foreign_key: true |
 
-* Database creation
+- belongs_to: article
+- belongs_to: department
 
-* Database initialization
+## departments
+| Columns    | Type   | Options     |
+| ---------- | ------ | ----------- |
+| department | string | null: false |
 
-* How to run the test suite
+- has_many: article_department_relations
+- has_many: articles, through: article_department_relations
 
-* Services (job queues, cache servers, search engines, etc.)
+## article_tag_relations
+| Columns    | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| article    | references | null: false, foreign_key: true |
+| tag        | references | null: false, foreign_key: true |
 
-* Deployment instructions
+- belongs_to: article
+- belongs_to: tag
 
-* ...
+## tags
+| Columns    | Type   | Options     |
+| ---------- | ------ | ----------- |
+| name       | string | null: false |
+
+- has_many: article_tag_relations
+- has_many: articles, through: article_tag_relations
