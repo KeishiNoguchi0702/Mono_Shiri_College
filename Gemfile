@@ -64,3 +64,5 @@ gem 'active_storage_validations', '~> 0.8.8'
 
 gem 'pry-rails'
 gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem 'faker'
