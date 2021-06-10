@@ -122,6 +122,7 @@
     </div>
   </div>
   <div id="image_list"></div>
+  <%= image_tag @user.image, id: 'image' if @user.image.present? %> 
 
   <div class='register-btn'>
     <%= f.submit "アカウント登録" ,class:"register-red-btn" %>
