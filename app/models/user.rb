@@ -28,8 +28,10 @@ class User < ApplicationRecord
     end
   end
 
-  #画像(PNG,JPEG,JPG)のみアップロード可能
-  validates :image, content_type: [:png, :jpg, :jpeg]
+  #アップロード可能な画像を指定（ファイル形式、サイズ、縦幅・横幅）
+  validates :image, content_type: [:png, :jpg, :jpeg],
+                    size: { less_than_or_equal_to: 10.megabytes },
+                    dimension: { width: { max: 1500} , height: { max: 1500 } }
 
   #active_storageとのアソシエーション
   has_one_attached :image
@@ -39,5 +41,5 @@ class User < ApplicationRecord
   belongs_to :department
   belongs_to :sex
   belongs_to :position
-  
+
 end
