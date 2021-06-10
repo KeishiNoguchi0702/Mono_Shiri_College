@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const ImageList = document.getElementById('image_list');
   document.getElementById('user-image').addEventListener('change', function(e){
-    console.log(123);
+    console.log(e);
   });
 });
