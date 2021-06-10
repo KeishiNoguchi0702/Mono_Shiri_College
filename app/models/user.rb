@@ -28,10 +28,16 @@ class User < ApplicationRecord
     end
   end
 
+  #画像(PNG,JPEG,JPG)のみアップロード可能
+  validates :image, content_type: [:png, :jpg, :jpeg]
+
+  #active_storageとのアソシエーション
   has_one_attached :image
   
+  #active_hashモジュールとのアソシエーション
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :department
   belongs_to :sex
   belongs_to :position
+  
 end
