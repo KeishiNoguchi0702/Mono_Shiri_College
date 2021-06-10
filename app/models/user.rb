@@ -7,4 +7,5 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :department
   belongs_to :sex
+  belongs_to :position
 end
