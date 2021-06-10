@@ -63,3 +63,4 @@ gem 'image_processing', '~> 1.2'
 gem 'active_storage_validations', '~> 0.8.8'
 
 gem 'pry-rails'
+gem 'rspec-rails'
