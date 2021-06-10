@@ -17,6 +17,8 @@ class User < ApplicationRecord
       validates :position_id
     end
   end
+
+  has_one_attached :image
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :department

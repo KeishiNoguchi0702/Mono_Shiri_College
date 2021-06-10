@@ -118,9 +118,11 @@
   <div class="img-upload">
     <div class="weight-bold-text">プロフィール画像</div>
     <div class="click-upload">
-      <%= f.file_field :image, id:"item-image" %>
+      <%= f.file_field :image, id:"user-image" %>
     </div>
   </div>
+  <div id="image_list"></div>
+  <%= image_tag @user.image, id: 'image' if @user.image.present? %> 
 
   <div class='register-btn'>
     <%= f.submit "アカウント登録" ,class:"register-red-btn" %>
