@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
     #在籍番号（数字6桁）
-    validates :certificate_number, uniqueness: true, numericality: { only_integer: true }, length: { minimum: 6 }
+    validates :certificate_number, uniqueness: { case_sensitive: false }, numericality: { only_integer: true }, length: { minimum: 6 }
 
     #氏名入力欄（全角ひらがな・カタカナ・漢字）
     with_options format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: 'is invalid. Input full-width characters.' } do
