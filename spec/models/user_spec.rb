@@ -633,6 +633,13 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include "在籍区分を正しく選択してください"
       end
 
+      #プロフィール-----------------------------------------------------------------------
+      it 'プロフィールは3,000超の文字数では登録できない' do
+        @user.profile = Faker::Base.regexify("[aあ]{3001}")
+        @user.valid?
+        expect(@user.errors.full_messages).to include "プロフィールは3000文字以内で入力してください"
+      end
+
       #画像-----------------------------------------------------------------------
       it '特定のファイル形式(PNG、JPG、JPEG)以外はアップロードできない（PDFファイルをアップロードした場合）' do
         @user.image.attach(io: File.open('app/assets/spectest/pdf.pdf'), filename: 'pdf.pdf')
