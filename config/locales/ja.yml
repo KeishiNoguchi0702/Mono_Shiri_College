@@ -10,3 +10,8 @@ ja:
         department_id: 学部・学科
         sex_id: 性別
         position_id: 在籍区分
+        image: 画像
+  errors:
+    messages:
+      content_type_invalid: "は【png】【jpg】【jpeg】以外の形式ではアップロードできません"
+      file_size_out_of_range: "のファイルサイズが10MBを超えているため、アップロードできません"
