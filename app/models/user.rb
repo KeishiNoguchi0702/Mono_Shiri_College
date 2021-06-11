@@ -33,6 +33,9 @@ class User < ApplicationRecord
     validates :position_id,   numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 3 , message: 'を正しく選択してください' }
   end
 
+  #プロフィール
+  validates :profile, length: { maximum: 3000 }
+
   #アップロード可能な画像を指定（ファイル形式、サイズ、縦幅・横幅）
   validates :image, content_type: [:png, :jpg, :jpeg],
                     size: { less_than_or_equal_to: 10.megabytes }
