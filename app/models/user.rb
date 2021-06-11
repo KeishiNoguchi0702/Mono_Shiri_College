@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   
   #在籍番号（数字6桁）
-  validates :certificate_number, presence: true, uniqueness: { case_sensitive: false }, numericality: { only_integer: true }, length: { minimum: 6 }
+  validates :certificate_number, presence: true, uniqueness: { case_sensitive: false }, numericality: { only_integer: true }, length: { minimum: 6, maximum: 6 }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -14,13 +14,13 @@ class User < ApplicationRecord
     #                            message: "のドメインは使用できません。使用できるドメインの一覧は、【使用可能なドメイン】を参照ください。" }
 
     #氏名入力欄（全角ひらがな・カタカナ・漢字）
-    with_options format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: 'には全角ひらがな・カタカナ・漢字以外は入力できません。' } do
+    with_options format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: 'には全角ひらがな・カタカナ・漢字以外は入力できません' } do
       validates :last_name
       validates :first_name
     end
 
     #カナ入力（全角カタカナ）
-    with_options format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カタカナ以外は入力できません。 ' } do
+    with_options format: { with: /\A[ァ-ヶー－]+\z/, message: 'には全角カタカナ以外は入力できません' } do
       validates :last_name_kana
       validates :first_name_kana
     end
