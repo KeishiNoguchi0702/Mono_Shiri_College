@@ -10,6 +10,7 @@ ja:
         department_id: 学部・学科
         sex_id: 性別
         position_id: 在籍区分
+        profile: プロフィール
         image: 画像
   errors:
     messages:
