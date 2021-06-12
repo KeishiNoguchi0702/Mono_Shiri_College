@@ -11,10 +11,10 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
 
-  with_options presence: true do
-    #メールアドレス
-    validates :email, format: { with: /\A[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\z/ }
+  #メールアドレス
+  validates :email, format: { with: /\A[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\z/ }
 
+  with_options presence: true do
     #氏名入力欄（全角ひらがな・カタカナ・漢字）
     with_options format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: 'には全角ひらがな・カタカナ・漢字以外は入力できません' } do
       validates :last_name
