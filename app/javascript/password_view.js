@@ -1,12 +1,29 @@
 document.addEventListener('DOMContentLoaded', function(){
-  const pwd = document.getElementById('password');
-  const pwdCheck = document.getElementById('password_checkbox_1');
-  
-  pwdCheck.addEventListener('change', function() {
-    if(pwdCheck.checked) {
-      pwd.setAttribute('type', 'text');
+ 
+  //パスワードオブジェクトの取得
+  const pwd1 = document.getElementById('password');
+  const pwdCheck1 = document.getElementById('password_checkbox_1');
+
+  //パスワードの表示
+  pwdCheck1.addEventListener('change', function() {
+    if(pwdCheck1.checked) {
+      pwd1.setAttribute('type', 'text');
     } else {
-      pwd.setAttribute('type', 'password');
+      pwd1.setAttribute('type', 'password');
     }
   });
+
+  //パスワードオブジェクトの取得
+  const pwd2 = document.getElementById('password-confirmation');
+  const pwdCheck2 = document.getElementById('password_checkbox_2');
+
+  //パスワード（確認用）の表示
+  pwdCheck2.addEventListener('change', function() {
+    if(pwdCheck2.checked) {
+      pwd2.setAttribute('type', 'text');
+    } else {
+      pwd2.setAttribute('type', 'password');
+    }
+  });
+
 });
