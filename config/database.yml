@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: Mono_Shiri_College_production
-  username: Mono_Shiri_College
-  password: <%= ENV['MONO_SHIRI_COLLEGE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
