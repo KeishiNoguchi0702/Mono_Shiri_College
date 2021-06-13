@@ -18,11 +18,11 @@
 - has_many :articles
 
 ## articles
-| Columns | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| title   | string     | null: false                    |
-| content | text       | null: false                    |
-| user    | references | null: false, foreign_key: true |
+| Columns | Type       | Options           |
+| ------- | ---------- | ----------------- |
+| title   | string     | null: false       |
+| content | text       | null: false       |
+| user    | references | foreign_key: true |
 
 - belongs_to: user
 - has_many: article_department_relations
@@ -31,10 +31,10 @@
 - has_many: tags, through: article_tag_relations
 
 ## article_department_relations
-| Columns    | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| article    | references | null: false, foreign_key: true |
-| department | references | null: false, foreign_key: true |
+| Columns    | Type       | Options           |
+| ---------- | ---------- | ----------------- |
+| article    | references | foreign_key: true |
+| department | references | foreign_key: true |
 
 - belongs_to: article
 - belongs_to: department
@@ -48,10 +48,10 @@
 - has_many: articles, through: article_department_relations
 
 ## article_tag_relations
-| Columns    | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| article    | references | null: false, foreign_key: true |
-| tag        | references | null: false, foreign_key: true |
+| Columns    | Type       | Options           |
+| ---------- | ---------- | ----------------- |
+| article    | references | foreign_key: true |
+| tag        | references | foreign_key: true |
 
 - belongs_to: article
 - belongs_to: tag
