@@ -126,13 +126,15 @@
   <div class='register-btn'>
     <%= f.submit "アカウント情報を更新" ,class:"register-red-btn" %>
   </div>
+  <li><%= link_to 'ユーザ詳細画面に戻る', user_path(@user.id), class: "user_edit_path" %></li>
+  <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
   <% else %>
   <div class='register-btn'>
     <%= f.submit "アカウント登録" ,class:"register-red-btn" %>
   </div>
+  <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
   <% end %>
 
-  <li><%= link_to 'ユーザ詳細画面に戻る', user_path(@user.id), class: "user_edit_path" %></li>
-  <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
+
 
 <% end %>
