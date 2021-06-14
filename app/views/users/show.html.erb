@@ -34,4 +34,12 @@
     <%= @user.profile %>
   </div>
 
-  <%= link_to "トップページに戻る", root_path %>
+<% if @user.id = current_user.id %>
+  <div>
+    <%= link_to "編集する", edit_user_registration_path %>
+  </div>
+<% end %>
+
+  <div>
+    <%= link_to "トップページに戻る", root_path %>
+  </div>
