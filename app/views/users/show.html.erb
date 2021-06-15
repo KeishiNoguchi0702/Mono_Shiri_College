@@ -10,6 +10,10 @@
   </div>
 <% end %>
 
+  <div id="name">
+    <%= image_tag @user.image, class:"user_img" if @user.image.attached? %>
+  </div>
+
   <div id="name">学部・学科：  
     <%= @user.department.name %>
   </div>
