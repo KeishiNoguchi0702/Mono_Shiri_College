@@ -1,5 +1,13 @@
 <h1><%= "#{@user.last_name}  #{@user.first_name}  さんのプロフィール" %></h1>
 
+  <div id="name">
+    <% if @user.image.attached? %>
+      <%= image_tag @user.image, class:"user_img" %>
+    <% else %>
+      <%= image_tag "no_image_square.jpg", class:"user_img" %>
+    <% end %>
+  </div>
+
 <% if @user.id = current_user.id %>
   <div id="certificate_number">在籍番号：  
     <%= @user.certificate_number %>
@@ -9,10 +17,6 @@
     <%= @user.email %>
   </div>
 <% end %>
-
-  <div id="name">
-    <%= image_tag @user.image, class:"user_img" if @user.image.attached? %>
-  </div>
 
   <div id="name">学部・学科：  
     <%= @user.department.name %>
