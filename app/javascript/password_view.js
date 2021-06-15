@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function(){
+  
+  //⓪現在のパスワード入力欄のプレビュー機能
+  if ( document.getElementById('current_password') ){
+    //パスワードオブジェクトの取得
+    const pwd2 = document.getElementById('current_password');
+    const pwdCheck2 = document.getElementById('current_password_checkbox');
+
+    //パスワード（確認用）の表示
+    pwdCheck2.addEventListener('change', function() {
+      if(pwdCheck2.checked) {
+        pwd2.setAttribute('type', 'text');
+      } else {
+        pwd2.setAttribute('type', 'password');
+      }
+    });
+  }
 
   //①パスワード入力欄のプレビュー機能
   if ( document.getElementById('password') ) {
