@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
+
+  //①パスワード入力欄のプレビュー機能
   if ( document.getElementById('password') ) {
     //パスワードオブジェクトの取得
     const pwd1 = document.getElementById('password');
@@ -12,7 +14,10 @@ document.addEventListener('DOMContentLoaded', function(){
         pwd1.setAttribute('type', 'password');
       }
     });
+  }
 
+  //②確認用パスワード入力欄のプレビュー機能
+  if ( document.getElementById('password_confirmation') ){
     //パスワードオブジェクトの取得
     const pwd2 = document.getElementById('password-confirmation');
     const pwdCheck2 = document.getElementById('password_checkbox_2');
@@ -26,4 +31,5 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
+
 });
