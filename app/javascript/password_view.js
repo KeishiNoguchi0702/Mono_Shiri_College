@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   //②確認用パスワード入力欄のプレビュー機能
-  if ( document.getElementById('password_confirmation') ){
+  if ( document.getElementById('password-confirmation') ){
     //パスワードオブジェクトの取得
     const pwd2 = document.getElementById('password-confirmation');
     const pwdCheck2 = document.getElementById('password_checkbox_2');
