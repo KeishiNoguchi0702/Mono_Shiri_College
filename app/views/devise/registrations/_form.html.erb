@@ -17,8 +17,20 @@
       <label class="form-text">メールアドレス</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"携帯メールアドレスはご利用いただけません", autofocus: true %>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"examle@example.com", autofocus: true %>
   </div>
+
+  <%#  現在のパスワード %>
+  <% if user_signed_in? %>
+    <div class="field">
+      <%= f.label :current_password %> （更新に必要ですので、必ずご入力お願いいたします。）<br>
+      <%= f.password_field :current_password, id:"current_password", placeholder:"現在設定済みのパスワード" %>
+    </div>
+    <div class="password_field">
+      <input type="checkbox" id="current_password_checkbox">
+      <label for="current_password_checkbox">  「現在のパスワード」を表示する</label>
+    </div>    
+  <% end %>
 
   <%# パスワード %>
   <div class="form-group">
@@ -37,14 +49,14 @@
   <%# パスワード確認 %>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">パスワード(確認)</label>
+      <label class="form-text">確認用パスワード</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
   </div>
   <div class="password_field">
     <input type="checkbox" id="password_checkbox_2">
-    <label for="password_checkbox_2">  パスワードを表示する</label>
+    <label for="password_checkbox_2">  確認用パスワードを表示する</label>
   </div>
 
   <%#氏名%>
