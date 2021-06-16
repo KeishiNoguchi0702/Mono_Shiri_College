@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
   before_action :article_find, only: [:show, :edit]
+  before_action :article_new, only: [:new, :update]
 
   def index
     @articles = Article.order("created_at DESC")
@@ -10,7 +11,6 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
   end
 
   def create
@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    render :show if @article.update(article_params)
   end
 
   private
@@ -32,6 +33,10 @@ class ArticlesController < ApplicationController
 
   def article_find
     @article = Article.find(params[:id])
+  end
+
+  def article_new
+    @article = Article.new
   end
 
 end
