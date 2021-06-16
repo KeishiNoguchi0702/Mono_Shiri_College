@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :article_find, only: [:show, :edit]
 
   def index
     @articles = Article.order("created_at DESC")
   end
 
   def show
-    @article = Article.find(params[:id])
   end
 
   def new
@@ -27,6 +28,10 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title,:content).merge(user_id: current_user.id)
+  end
+
+  def article_find
+    @article = Article.find(params[:id])
   end
 
 end
