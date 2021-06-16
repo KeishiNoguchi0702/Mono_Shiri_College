@@ -8,5 +8,5 @@ class Article < ApplicationRecord
   has_many :departments, through: :article_department_relations
   has_many :article_tag_relations
   has_many :tags, through: :article_tag_relations
-
+  has_rich_text :content
 end
