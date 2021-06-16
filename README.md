@@ -21,7 +21,6 @@
 | Columns | Type       | Options           |
 | ------- | ---------- | ----------------- |
 | title   | string     | null: false       |
-| content | text       | null: false       |
 | user    | references | foreign_key: true |
 
 - belongs_to: user
