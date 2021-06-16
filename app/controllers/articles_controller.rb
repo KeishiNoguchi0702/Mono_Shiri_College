@@ -4,13 +4,17 @@ class ArticlesController < ApplicationController
     @articles = Article.order("created_at DESC")
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
   def new
     @article = Article.new
   end
 
   def create
     @article = Article.new(article_params)
-    redirect_to root_path if @article.save
+    render :show if @article.save
   end
 
   private
