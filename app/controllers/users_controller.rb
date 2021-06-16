@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :user_set
-  before_action :move_to_index, except: :show
+  before_action :user_set, except: [:index]
+  before_action :move_to_index, only: [:destroy]
   
+  def index
+    @users =  User.order("certificate_number ASC")
+  end
+
   def show
   end
 
