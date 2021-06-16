@@ -1,13 +1,18 @@
 <h1>記事投稿画面</h1>
 
-<%= form_with(model: @article, local: true) do |f| %>
+<%= form_with(model: @article, url: articles_path, local: true) do |f| %>
   <div id="article_title">
     <%= f.label :タイトル %> <br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, autofocus: true %>
   </div>
+  
   <div id="article_text">
     <%= f.label :内容 %>
     <%= f.rich_text_area :content %>
+  </div>
+
+  <div class='register-btn'>
+    <%= f.submit "記事投稿" ,class:"regist_article" %>
   </div>
 <% end %>
 
