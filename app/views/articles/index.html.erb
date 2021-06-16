@@ -1,0 +1,11 @@
+<h1>投稿記事一覧</h1>
+
+<% @articles.each do |article| %>
+  <div id="respect_article">
+    <li><%= link_to article.title, "#" %></li>
+    <li><%= link_to "#{article.user.first_name}  #{article.user.last_name}  さん", user_path(article.user_id) %></li>
+  </div>
+<% end %>
+
+<br>
+<%= link_to 'トップページに戻る', root_path, class: "top_path" %>
