@@ -1,0 +1,19 @@
+<h1>記事編集</h1>
+
+<%= form_with(model: @article, url: article_path(@article.user_id), local: true) do |f| %>
+  <div id="article_title">
+    <%= f.label :タイトル %> <br>
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+  
+  <div id="article_text">
+    <%= f.label :内容 %>
+    <%= f.rich_text_area :content %>
+  </div>
+
+  <div class='register-btn'>
+    <%= f.submit "記事更新" ,class:"update_article" %>
+  </div>
+<% end %>
+
+<%= link_to "トップページに戻る", root_path %>
