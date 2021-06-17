@@ -12,6 +12,9 @@ ja:
         position_id: 在籍区分
         profile: プロフィール
         image: 画像
+      article:
+        title: タイトル
+        content: 投稿内容
   errors:
     messages:
       content_type_invalid: "は【png】【jpg】【jpeg】以外の形式ではアップロードできません"
