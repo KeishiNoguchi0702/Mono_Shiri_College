@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :user_set, except: [:index]
-  before_action :move_to_index, only: [:destroy]
+  before_action :user_set, only: [:show] #except: [:index]
+  #before_action :move_to_index, only: [:destroy]
   
   def index
     @users =  User.order("certificate_number ASC")
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.includes(:articles).find(params[:id])
     render template: "retirements/done" if @user.destroy
   end
 

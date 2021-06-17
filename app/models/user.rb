@@ -51,5 +51,4 @@ class User < ApplicationRecord
   belongs_to :department
   belongs_to :sex
   belongs_to :position
-
 end
