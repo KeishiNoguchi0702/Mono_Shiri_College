@@ -8,6 +8,7 @@
 <ul>
   <% if @article.user_id == current_user.id %>
     <li><%= link_to '投稿内容を編集する', edit_article_path(@article.id), class: "top_path" %></li>
+    <li><%= link_to '投稿内容を削除する', article_path(@article.id), method: :delete, class: "top_path" %></li>
   <% end %>
     <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
     <li><%= link_to '記事一覧に戻る', articles_path, class: "articles_path" %></li>
