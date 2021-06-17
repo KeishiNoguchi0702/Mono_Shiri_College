@@ -15,7 +15,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    render :show if @article.save
+    if @article.save
+      render :show 
+    else
+      render :new
+    end
   end
 
   def edit
