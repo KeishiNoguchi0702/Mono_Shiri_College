@@ -41,8 +41,11 @@ class User < ApplicationRecord
                     size: { less_than_or_equal_to: 10.megabytes }
 
   #active_storageとのアソシエーション
-  has_one_attached :image
+  has_one_attached :image, dependent: :destroy
   
+  #記事投稿ファイルとのアソシエーション
+  has_many :articles, dependent: :destroy
+
   #active_hashモジュールとのアソシエーション
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :department
