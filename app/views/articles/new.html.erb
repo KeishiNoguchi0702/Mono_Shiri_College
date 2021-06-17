@@ -5,12 +5,12 @@
 
   <div id="article_title">
     <%= f.label :タイトル %> <br>
-    <%= f.text_field :title, autofocus: true %>
+    <%= f.text_field :title, placeholder: 'Type a title...', autofocus: true %>
   </div>
   
   <div id="article_text">
     <%= f.label :内容 %>
-    <%= f.rich_text_area :content %>
+    <%= f.rich_text_area :content, placeholder: 'Type a content...' %>
   </div>
 
   <div class='register-btn'>
