@@ -26,7 +26,11 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    render :show if @article.update(article_params)
+    if @article.update(article_params)
+      render :show
+    else
+      render :edit
+    end
   end
 
   def destroy
