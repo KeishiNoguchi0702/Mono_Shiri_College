@@ -23,7 +23,7 @@
     <div class="site_gnav_sns">
       <%= link_to image_tag("twitter_logo", class: "twitter_logo"), "#", target: "_blank" %>
     </div>
-    <div class="certificate_data">
+    <div class="user_data">
       ID：
       <% if user_signed_in? %>
         <%= current_user.certificate_number %>
