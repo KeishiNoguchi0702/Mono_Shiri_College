@@ -1,12 +1,43 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <%= link_to image_tag("awesome_library.webp", class:"college-icon"), "/" %>
-    <%#<form class="search-form" action="#">%>
-      <%#<input class='input-box' placeholder='キーワードから探す'>%>
-      <%#<button class="search-button">%>
-        <%#<%= image_tag "search.png", class:"search-icon" %>
-      <%#</button>%>
-    <%#</form>%>
+<%# CSS・・・assets/stylesheets/shared/header.scss %>
+<header class='site-header'>
+  <div class="nav_header">
+    <div calss="site_header_logo">
+      <%= link_to image_tag("college_logo.png",class: "site_header_logo", :alt => "mono shiri college"), root_path %>
+    </div>
+    <div class="site_gnav_innner">
+      <div class="site_gnav_list">
+        <div class="top">
+          <%= link_to "TOP", root_path %>
+        </div>
+        <div class="news">
+          <%= link_to "NEWS",'#' %>
+        </div>
+        <div class="articles">
+          <%= link_to "ARTICLES",'#' %>
+        </div>
+        <div class="users">
+          <%= link_to "USERS",'#' %>
+        </div>
+      </div>
+    </div>
+    <div class="site_gnav_sns">
+      <%= link_to image_tag("twitter_logo", class: "twitter_logo"), "#", target: "_blank" %>
+    </div>
+    <div class="user_data">
+      ID：
+      <% if user_signed_in? %>
+        <%= current_user.certificate_number %>
+        <%= "#{current_user.last_name}  #{current_user.first_name}  さん" %>
+      <% else %>
+        -
+      <% end %>
+    </div>
+    <div class="user_aicon">
+      <% if user_signed_in? && current_user.image.attached? %>
+        <%= image_tag current_user.image, class:"user_image" %>
+      <% else %>
+        <%= image_tag "no_image_square.jpg", class:"user_img" %>
+      <% end %>
+    </div>
   </div>
 </header>

@@ -1,0 +1,40 @@
+.nav_header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.site_header_logo {
+  height: 50px;
+}
+
+.site_gnav_list {
+  display: flex;
+  font-weight: bold;
+}
+
+.top, .news, .articles, .users {
+  margin-left: 40px;
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: darkslategray;
+  }
+}
+
+img.user_image, img.twitter_logo {
+  $length: 40px;
+  border-radius: 50%;
+  width: $length;
+  height: $length;
+}
+
+img.twitter_logo {
+  margin: 0 40px 0 500px;
+}
+
+.user_data {
+  color: darkslategray;
+  font-weight: bold;
+}
+
