@@ -1,49 +1,49 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
+<%# CSS・・・assets/stylesheets/shared/header.scss %>
 <header class='site-header'>
-  <div class='search-bar-contents'>
-    <p calss="site_header_logo">
-      <%= link_to image_tag("college_logo.png",:alt => "mono shiri college"), root_path %>
-    </p>
-    <nav class="site_gnav">
-      <div class="sit_gnav_outer">
-        <div class="site_gnav_innner">
-          <ul class="site_gnav_list">
-            <li class="about">
-              <%= link_to "ABOUT THE COLLEGE",root_path %>
-            </li>
-            <li class="news">
-              <%= link_to "NEWS",'#' %>
-            </li>
-            <li class="articles">
-              <%= link_to "ARTICLES",'#' %>
-            </li>
-            <li class="users">
-              <%= link_to "USERS",'#' %>
-            </li>
-          </ul>
-          <ul class="site_gnav_sns">
-            <%= link_to image_tag("twitter_logo"), "#", target: "_blank" %>
-          </ul>
+  <p calss="site_header_logo">
+    <%= link_to image_tag("college_logo.png",:alt => "mono shiri college"), root_path %>
+  </p>
+  <div class="test_nav">
+  <nav class="site_gnav">
+    <div class="site_gnav_outer">
+      <div class="site_gnav_innner">
+        <ul class="site_gnav_list">
+          <li class="top">
+            <%= link_to "TOP", root_path %>
+          </li>
+          <li class="news">
+            <%= link_to "NEWS",'#' %>
+          </li>
+          <li class="articles">
+            <%= link_to "ARTICLES",'#' %>
+          </li>
+          <li class="users">
+            <%= link_to "USERS",'#' %>
+          </li>
+        </ul>
+        <ul class="site_gnav_sns">
+          <%= link_to image_tag("twitter_logo", class: "twitter_logo"), "#", target: "_blank" %>
+        </ul>
+      </div>
+      <div class="user_data">
+        <div class="user_meta_data">
+          ID：
+          <% if user_signed_in? %>
+            <%= current_user.certificate_number %>
+            <%= "#{current_user.last_name}  #{current_user.first_name}  さん" %>
+          <% else %>
+            -
+          <% end %>
         </div>
         <div class="user_data">
-          <div class="user_meta_data">
-            ID：
-            <% if user_signed_in? %>
-              <%= current_user.certificate_number %>
-              <%= "#{current_user.last_name}  #{current_user.first_name}  さん" %>
-            <% else %>
-              -
-            <% end %>
-          </div>
-          <div class="user_data">
-            <% if user_signed_in? && current_user.image.attached? %>
-              <%= image_tag current_user.image, class:"user_image" %>
-            <% else %>
-              <%= image_tag "no_image_square.jpg", class:"user_img" %>
-            <% end %>
-          </div>
+          <% if user_signed_in? && current_user.image.attached? %>
+            <%= image_tag current_user.image, class:"user_image" %>
+          <% else %>
+            <%= image_tag "no_image_square.jpg", class:"user_img" %>
+          <% end %>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+</div>
 </header>
