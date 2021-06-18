@@ -1,0 +1,17 @@
+.video_wrap {
+  position: relative
+}
+
+#top_video {
+  width: 100vw;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #FFF;
+  font-size: 700%;
+  position: absolute;
+  left: 23%;
+  top: 200px;
+  z-index: 1;
+}
