@@ -24,20 +24,27 @@
       <%= link_to image_tag("twitter_logo", class: "twitter_logo"), "#", target: "_blank" %>
     </div>
     <div class="user_data">
-      ID：
-      <% if user_signed_in? %>
-        <%= current_user.certificate_number %>
-        <%= "#{current_user.last_name}  #{current_user.first_name}  さん" %>
-      <% else %>
-        -
-      <% end %>
+      <div class="certificate_number">
+          <%= "ID： #{current_user.certificate_number}" if user_signed_in? %>
+      </div>
+      <div class="user_name">
+        <% if user_signed_in? %>
+          <%= "#{current_user.last_name}  #{current_user.first_name}  さん" %>
+        <% else %>
+          <div class="log_in_btn">
+            <%= link_to 'LOG_IN', new_user_session_path, class: "login" %>
+          </div>
+          <div class="sign_in_btn">
+            <%= link_to 'SIGN_UP', new_user_registration_path, class: "sign_up" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="user_aicon">
+        <% if user_signed_in? && current_user.image.attached? %>
+          <%= link_to image_tag(current_user.image, class:"user_image"), user_path(current_user.id) %>
+        <% end %>
+      </div>
     </div>
-    <div class="user_aicon">
-      <% if user_signed_in? && current_user.image.attached? %>
-        <%= image_tag current_user.image, class:"user_image" %>
-      <% else %>
-        <%= image_tag "no_image_square.jpg", class:"user_img" %>
-      <% end %>
-    </div>
+
   </div>
 </header>
