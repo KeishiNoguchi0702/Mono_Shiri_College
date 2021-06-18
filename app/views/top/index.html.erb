@@ -1,8 +1,11 @@
+<%# CSS・・・assets/stylesheets/top/index.scss %>
 <%= render "shared/header" %>
 
-<div class="video-wrap">
-  <video src="assets/videos/top_video.mp4" autoplay loop muted></video>
-</div>
+  <p>Mono Siri College</p>
+  <div class="patern"></div>
+  <%#<div class="video_wrap">%>
+    <video id="top_video", src="assets/videos/top_video.mp4" autoplay loop muted></video>
+  <%#<div>%>
 
   <% if user_signed_in? %>
     <li><%= link_to "#{current_user.last_name}  #{current_user.first_name}さん", user_path(current_user.id), class: "user-nickname" %></li>
