@@ -2,20 +2,9 @@
 <%= render "shared/header" %>
 
   <p>Mono Siri College</p>
-  <div class="patern"></div>
-  <%#<div class="video_wrap">%>
-    <video id="top_video", src="assets/videos/top_video.mp4" autoplay loop muted></video>
-  <%#<div>%>
-
-  <% if user_signed_in? %>
-    <li><%= link_to "#{current_user.last_name}  #{current_user.first_name}さん", user_path(current_user.id), class: "user-nickname" %></li>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-    <li><%= link_to 'ユーザ一覧', users_path, class: "users_index" %></li>
-    <li><%= link_to '投稿記事一覧', articles_path, class: "articles_index" %></li>
-    <li><%= link_to '記事投稿', new_article_path, class: "new_article" %></li>
-  <% else %>
-    <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-    <li><%= link_to '新規登録', new_user_registration_path, class: "sign_up" %></li>
-  <% end %>
-
-  
+  <div class="video_wrap">
+    <div class="top_video" id="top_video" data-video="./assets/videos/top_video.mp4" data-poster="./assets/images/college_logo.png">
+      <video id="video" src="./assets/videos/top_video.mp4" playsinline="" muted="" loop="" autoplay="" poster="./assets/images/college_logo.png" style="width: 1920; height: 1080px;"></video>
+    </div>
+    <div class="back_ground"></div>
+  <div>
