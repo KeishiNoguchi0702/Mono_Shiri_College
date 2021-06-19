@@ -1,10 +1,20 @@
 <%# CSS・・・assets/stylesheets/top/index.scss %>
 <%= render "shared/header" %>
 
-  <p>Mono Siri College</p>
+  <p class="title">
+    <span class="slice_mono">Mono</span> 
+    <span class="slice_siri">Siri</span> 
+    <span class="slice_college">College</span>
+  </p>
+
   <div class="video_wrap">
-    <div class="top_video" id="top_video" data-video="./assets/videos/top_video.mp4" data-poster="./assets/images/college_logo.png">
-      <video id="video" src="./assets/videos/top_video.mp4" playsinline="" muted="" loop="" autoplay="" poster="./assets/images/college_logo.png" style="width: 1920; height: 1080px;"></video>
+    <div class="top_video" id="top_video" data-video="./assets/videos/top_video.mp4">
+      <video id="video" src="./assets/videos/top_video.mp4" playsinline="" muted="" loop="" autoplay="" style="width: 1920; height: 1080px;"></video>
     </div>
     <div class="back_ground"></div>
+    <div class="topics">
+      <div class="twitter_emb">
+        <a class="twitter-timeline" data-lang="en" data-width="400" data-height="300" data-dnt="true" data-theme="dark" href="https://twitter.com/var_Keisys?ref_src=twsrc%5Etfw">Tweets by var_Keisys</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
   <div>
