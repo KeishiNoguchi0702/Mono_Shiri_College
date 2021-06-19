@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+  <div class="new_article">
+    <p class="new_article_title"><%= article.title %></p> <%#ここは50文字まで%>
+    <p class="new_article_content"><%= article.content %></p> <%#ここは54文字まで%>
+  </div>
+<% end %>
+
+
