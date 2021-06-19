@@ -1,9 +1,23 @@
 .video_wrap {
-  position: relative
+  position: fixed;
+  top: 45px;
+  z-index: 1;
 }
 
 #top_video {
+  position: absolute;
   width: 100vw;
+  top: 10px;
+  z-index: 0;
+}
+
+.back_ground {
+  position: absolute;
+  background: url(http://www.webcreatorbox.com/sample/images/yokojima.png) repeat 0 0;
+  height: 1920px;
+  width: 100vw;
+  top: 10px;
+  z-index: 2;
 }
 
 p {
@@ -12,6 +26,6 @@ p {
   font-size: 700%;
   position: absolute;
   left: 23%;
-  top: 200px;
-  z-index: 1;
+  top: 150px;
+  z-index: 2;
 }
