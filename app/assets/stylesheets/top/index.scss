@@ -26,7 +26,7 @@
   font-size: 700%;
   position: absolute;
   left: 21.5%;
-  top: 150px;
+  top: 100px;
   z-index: 2;
 }
 
@@ -42,17 +42,27 @@
 }
 
 .topics {
+  display: flex;
   position: absolute;
+  background-color: rgba(219, 130, 14, 0.4);
   width: 100vw;
-  height: 400px;
-  top: 300px;
-  right: 15vw;
-  left: 15vw;
+  height: 450px;
+  top: 225px;
   z-index: 2; 
 }
 
 .twitter_emb {
   position: absolute;
   top: 20px;
-  
+  left: 50px;
+}
+
+.new_articles {
+  position: absolute;
+  top: 20px;
+  left: 450px;
+  height: 400px;
+  width: 940px;
+  border-radius: 5px;
+  background-color: rgb(41, 47, 51);
 }
