@@ -10,17 +10,16 @@
       <%= render "shared/error_messages", model: f.object %>
 
       <div class="new_article_editor_title", id="article_title">
-        <%= f.label :Title, {class: 'new_article_title_editor'} %> <br>
+        <%= f.label :Title, {class: 'label_new_article_title_editor'} %> <br>
         <%= f.text_field :title, placeholder: '    Type a title...', autofocus: true, :class => 'new_article_title_editor_box' %>
       </div>
       
-      <div id="article_text">
-        <%= f.label :内容 %>
-        <%= f.rich_text_area :content, placeholder: 'Type a content...' %>
+      <div class="new_article_editor_content", id="article_text">
+        <%= f.label :Content, {class: 'label_new_article_content_editor'} %>
+        <%= f.rich_text_area :content, placeholder: '    Type a content...',:class => 'new_article_content_editor_box' %>
       </div>
-
-      <div class='register-btn'>
-        <%= f.submit "記事投稿" ,class:"regist_article" %>
+      <div class='post_article'>
+        <%= f.submit "POST ARTTICLE" , class:"post_article_btn", id:"post_article_btn" %>
       </div>
     <% end %>
   </div>

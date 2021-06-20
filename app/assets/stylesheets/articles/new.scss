@@ -1,7 +1,7 @@
 //背景色
 .new_article_editor_back_ground {
   height: 100vw;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(41, 47, 51, 0.89);
 }
 
@@ -34,19 +34,56 @@
   padding-left: 20px;
 }
 
-//タイトルエディタのラベル部分
-.new_article_title_editor {
+//エディタのラベル部分
+.label_new_article_title_editor,
+.label_new_article_content_editor {
   color:#FFF;
   font-weight: bold;
   font-size: 20px;
 }
 
+//タイトル入力欄
 .new_article_title_editor_box {
   width: 100%;
   height: 40px;
   font-size: 16px;
   border: none;
-  border-radius: 10px;
-  border-color: dodgerBlue;
-  box-shadow: 0 0 8px 0 rgb(163, 187, 211);
+  border-radius: 5px;
+  background-color: #FFF;
+}
+
+.new_article_editor_content {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+//コンテンツ入力欄
+.new_article_content_editor_box {
+  overflow: auto;
+  width: 100%;
+  height: 300px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFF;
+}
+
+//リッチテキストの装飾効果ボタン
+.trix-button-group {
+  background-color: #FFF;
+}
+
+.post_article {
+  margin-top: 20px;
+}
+
+.post_article_btn {
+  position: absolute;
+  left: 38%;
+  border: none;
+  border-radius: 5px;
+  width: 25%;
+  height: 40px;
+  background-color: lightskyblue;
+  font-weight: bold;
 }
