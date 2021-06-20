@@ -1,0 +1,52 @@
+//背景色
+.new_article_editor_back_ground {
+  height: 100vw;
+  width: 100vw;
+  background-color: rgba(41, 47, 51, 0.89);
+}
+
+//背景色にフィルタ
+.dammy {
+  position: absolute;
+  height: 100vw;
+  width: 100%;
+  background: url(http://www.webcreatorbox.com/sample/images/yokojima.png) repeat;
+}
+
+//エディタの領域（中央寄席にするため別要素に指定）
+.new_article_editor {
+  width: 50%;
+  margin: 0 auto;
+}
+
+//ページ上部のタイトル
+.post_title {
+  margin-top: 20px;
+  color: lightskyblue;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+//エディタのタイトル
+.new_article_editor_title {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+//タイトルエディタのラベル部分
+.new_article_title_editor {
+  color:#FFF;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.new_article_title_editor_box {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 rgb(163, 187, 211);
+}
