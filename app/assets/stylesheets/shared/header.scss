@@ -11,9 +11,19 @@
   height: 50px;
 }
 
+//メニューボタン
 .site_gnav_list {
   display: flex;
   font-weight: bold;
+}
+
+.sub_menu {
+  display: none;
+  background-color: lightskyblue;
+}
+
+.sub_menu ul li a{
+  color: brown;
 }
 
 .top, .news, .articles, .users, .log_in_btn, .sign_in_btn {

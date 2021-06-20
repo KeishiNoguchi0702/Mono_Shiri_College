@@ -13,10 +13,11 @@
           <%= link_to "NEWS",'#' %>
         </div>
         <div class="articles", id="articles_btn">
-          <ul class="article_nav_bar">
-            <li><%= link_to "ARTICLES", articles_path %></li>
-            <li><%= link_to "POST", new_article_path %></li>
-          <ul>
+          <a>ARTICLES</a>
+            <ul class="sub_menu">
+              <li><%= link_to "ARTICLES", articles_path %></li>
+              <li><%= link_to "POST", new_article_path %></li>
+            </ul>
         </div>
         <div class="users", id="users_btn">
           <%= link_to "USERS",users_path %>
