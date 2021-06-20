@@ -10,7 +10,7 @@ function newArticlesHover() {
       });
   
       newArticleTitle.addEventListener('mouseout', function() {
-      this.setAttribute("style", "color: lightskyblue;");
+      this.setAttribute("style", "color:lightskyblue;");
       });
 
     };

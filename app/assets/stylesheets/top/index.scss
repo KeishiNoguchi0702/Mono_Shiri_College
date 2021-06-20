@@ -1,5 +1,6 @@
 .video_wrap {
   position: fixed;
+  overflow: true;
   top: 45px;
   z-index: 1;
 }
@@ -21,6 +22,7 @@
 }
 
 .title {
+  animation: blink 2.5s ease-in-out infinite alternate;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #FFF;
   font-size: 700%;
@@ -28,6 +30,11 @@
   left: 21.5%;
   top: 100px;
   z-index: 2;
+}
+
+@keyframes blink {
+  0% {opacity: 0.5;}
+  100% {opacity: 1;}
 }
 
 .slice_mono {
@@ -88,14 +95,16 @@
 }
 
 .new_article {
-  border-bottom: inset 1px lightskyblue;
+  border-bottom: inset 1px lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 a.new_article_title_str {
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  color: lightskyblue;
+  color:lightskyblue;
   margin: 10px 0 0 10px;
 }
 
@@ -104,7 +113,7 @@ a.new_article_title_str {
 }
 
 .new_article_content {
-  margin: 5px 0 0 10px;
+  margin: 0 0 0 10px;
   font-size: 14px;
 }
 
