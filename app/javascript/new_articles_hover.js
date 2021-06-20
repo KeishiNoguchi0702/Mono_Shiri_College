@@ -1,17 +1,21 @@
 function newArticlesHover() {
   
-  if ( document.getElementById('new_article_title_str') ) {
+  for (let num = 0; num <= 6; num++) {
+    if ( document.getElementById(`new_article_title_str${num}`) ) {
 
-    const newArticleTitle = document.getElementById('new_article_title_str');
-    newArticleTitle.addEventListener('mouseover', function() {
-      this.setAttribute("style", "color: magenta;");
-    });
+      const newArticleTitle = document.getElementById(`new_article_title_str${num}`);
+      
+      newArticleTitle.addEventListener('mouseover', function() {
+        this.setAttribute("style", "color: rgba(255, 0, 255, 0.9);");
+      });
+  
+      newArticleTitle.addEventListener('mouseout', function() {
+      this.setAttribute("style", "color: lightskyblue;");
+      });
 
-    newArticleTitle.addEventListener('mouseout', function() {
-      this.setAttribute("style", "color: #FFF;");
-    });
-
+    };
   };
+
 };
 
 window.addEventListener('load', newArticlesHover);

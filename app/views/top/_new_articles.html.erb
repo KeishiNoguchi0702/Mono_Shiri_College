@@ -1,6 +1,21 @@
+<% num = 0 %>
 <% @articles.each do |article| %>
+<% num += 1 %>
   <div class="new_article">
-    <p class="new_article_title"><%= link_to article.title, article_path(article.id),:id => 'new_article_title_str', class: "new_article_title_str" %></p>
-    <p class="new_article_content"><%= article.content %></p> <%#ここは54文字まで%>
+    <p class="new_article_title">
+      <% if article.title.length >= 55 %>
+        <%= link_to article.title.truncate(55), article_path(article.id),:id => "new_article_title_str#{num}" , class: "new_article_title_str" %>
+      <% else %>
+        <%= link_to article.title, article_path(article.id),:id => "new_article_title_str#{num}" , class: "new_article_title_str" %>
+      <% end %>
+    </p>
+    <p class="new_article_content">
+      <% article_content = strip_tags(article.content.to_s).gsub(/[\n]/,"").strip %>
+      <% if article_content.length >= 65 %>
+        <%= article_content.truncate(65) %>
+      <% else %>
+        <%= article_content %>
+      <% end %>
+    </p>
   </div>
 <% end %>
