@@ -1,4 +1,4 @@
-function postArticleHover() {
+function targetButtonHover() {
 
   const arr = ['article_user_edit_link','article_user_delete_link','article_user_top_link','article_user_articles_link','post_article_btn'];
 
@@ -20,4 +20,4 @@ function postArticleHover() {
 
 };
 
-window.addEventListener('load', postArticleHover);
+window.addEventListener('load', targetButtonHover);
