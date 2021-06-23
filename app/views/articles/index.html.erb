@@ -1,11 +1,13 @@
 <%= render "shared/header" %>
 
 <div class="new_articles_index_wrap">
-<div class="new_articles_index_dammy">
-  <h1 class="new_articles_index_title">INDEX ARTICLES</h1>
-  <div class="new_articles_index_viewer">
+  <div class="new_articles_index_dammy">
+    <h1 class="new_articles_index_title">INDEX ARTICLES</h1>
+    <div class="new_articles_viewer_box">
       <%= render "new_articles" %>
-    <%= paginate @articles %>
+    </div>
+    <div class="page_roll">
+      <%= paginate @articles %>
+    </div>
   </div>
-</div>
 </div>

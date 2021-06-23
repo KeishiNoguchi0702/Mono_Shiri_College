@@ -27,3 +27,51 @@
   width: 100%;
   background: url(http://www.webcreatorbox.com/sample/images/yokojima.png) repeat;
 }
+
+//一覧ボックス
+.new_articles_viewer_box {
+  width: 50%;
+  margin: 20px auto;
+  background-color: rgb(41, 47, 51);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+//個別の記事表示領域
+.new_articles_respect_index {
+  background-color: rgb(41, 47, 51);
+  margin-bottom: 10px;
+  border-bottom: solid 0.3px gray;
+}
+
+.new_articles_respect_title {
+  margin-bottom: 5px;
+}
+
+//個別のコンテンツ内容
+.new_articles_respect_content {
+  color: #FFF;
+  font-size: 14px;
+  height: 40px;
+  margin-left: 15px;
+}
+
+.page_roll {
+  width: 30%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: rgba(255, 166, 0, 0.342);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.current {
+  color: skyblue ;
+  font-weight: bold;
+  font-size: 20px;
+}
