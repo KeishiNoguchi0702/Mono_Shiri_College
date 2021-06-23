@@ -1,8 +1,9 @@
+<%# CSS・・・assets/stylesheets/shared/error_alert.scss %>
 <% if model.errors.any? %>
-<div class="error-alert">
-  <ul>
+<div class="error_alert">
+  <ul><span class="error_title">Error!!!</span>
     <% model.errors.full_messages.each do |message| %>
-      <li class='error-message'><%= message %></li>
+      <li class='error-message'><%= "    ◆ " + message %></li>
     <% end %>
   </ul>
 </div>
