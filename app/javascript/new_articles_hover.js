@@ -1,6 +1,6 @@
 function newArticlesHover() {
   
-  for (let num = 0; num <= 10; num++) {
+  for (let num = 0; num <= 20; num++) {
     if ( document.getElementById(`new_article_title_str${num}`) ) {
 
       const newArticleTitle = document.getElementById(`new_article_title_str${num}`);

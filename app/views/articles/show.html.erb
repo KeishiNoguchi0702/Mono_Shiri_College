@@ -1,4 +1,4 @@
-<%# CSS・・・assets/stylesheets/articles/new.scss %>
+<%# CSS・・・assets/stylesheets/articles/show.scss %>
 <%= render "shared/header" %>
 
 <div class="article_viewer_wrap">
@@ -11,18 +11,35 @@
     <div class="article_viewer_content_box">
       <%= @article.content%>
     </div>
+    <div class="article_viewer_user_wrap">
+      <div class="article_user_aicon">
+        <% if @article.user.image.attached? %>
+          <%= link_to image_tag(@article.user.image, class:"article_user_image"), user_path(@article.user.id) %>
+        <% else %>
+          <%= link_to image_tag("no_image_square.jpg", class:"article_user_image"), user_path(@article.user.id) %>
+        <% end %>
+      </div>
+      <div class="article_user_name">
+        <%= link_to "#{@article.user.last_name}  #{@article.user.first_name}  さん", user_path(@article.user.id), :class => "article_user_name_link" %>
+      </div>
+    </div>
+  </div>
+  <div class="article_user_controller">
+    <% if @article.user_id == current_user.id %>
+      <div class="article_user_edit_link">
+        <%= link_to 'EDIT', edit_article_path(@article.id), class: "article_user_edit_path" %>
+      </div>
+      <div class="article_user_delete_link">
+        <%= link_to 'DELETE', article_path(@article.id), method: :delete, class: "article_user_delete_path" %>
+      </div>
+    <% end %>
+      <div class="article_user_top_link">
+        <%= link_to 'TOP', root_path, class: "article_user_top_path" %>
+      </div>
+      <div class="article_user_articles_link">
+        <%= link_to 'ARTICLES', articles_path, class: "article_user_articles_path" %>
+      </div>
   </div>
 </div>
 </div>
 <div>
-
-<h1>投稿者：<%= "#{@article.user.last_name}  #{@article.user.first_name}  さん" %></h1>
-<ul>
-  <% if @article.user_id == current_user.id %>
-    <li><%= link_to '投稿内容を編集する', edit_article_path(@article.id), class: "top_path" %></li>
-    <li><%= link_to '投稿内容を削除する', article_path(@article.id), method: :delete, class: "top_path" %></li>
-  <% end %>
-    <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
-    <li><%= link_to '記事一覧に戻る', articles_path, class: "articles_path" %></li>
-</ul>
-</div>
