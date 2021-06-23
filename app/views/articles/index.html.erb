@@ -1,12 +1,11 @@
-<h1>投稿記事一覧</h1>
+<%= render "shared/header" %>
 
-<% @articles.each do |article| %>
-  <div id="respect_article">
-    <li><%= link_to article.title, article_path(article.id  ) %></li>
-    <li><%= link_to "#{article.user.first_name}  #{article.user.last_name}  さん", user_path(article.user_id) %></li>
-    <br>
+<div class="new_articles_index_wrap">
+<div class="new_articles_index_dammy">
+  <h1 class="new_articles_index_title">INDEX ARTICLES</h1>
+  <div class="new_articles_index_viewer">
+      <%= render "new_articles" %>
+    <%= paginate @articles %>
   </div>
-<% end %>
-<%= paginate @articles %>
-<br>
-<%= link_to 'トップページに戻る', root_path, class: "top_path" %>
+</div>
+</div>

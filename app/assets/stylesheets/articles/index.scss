@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+//ページ上部のタイトル
+.new_articles_index_title {
+  margin-top: 15px;
+  color: lightskyblue;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+//一覧表示領域全体
+.new_articles_index_wrap {
+  position: relative;
+  top: 50px;
+  height: 100vw;
+  width: 100%;
+  background-color: rgba(41, 47, 51, 0.89);
+}
+
+//一覧表示領域のフィルター画像
+.new_articles_index_dammy {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(http://www.webcreatorbox.com/sample/images/yokojima.png) repeat;
+}
