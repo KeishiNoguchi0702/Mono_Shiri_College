@@ -26,17 +26,17 @@
   </div>
   <div class="article_user_controller">
     <% if @article.user_id == current_user.id %>
-      <div class="article_user_edit_link">
+      <div class="article_user_edit_link", id="article_user_edit_link">
         <%= link_to 'EDIT', edit_article_path(@article.id), class: "article_user_edit_path" %>
       </div>
-      <div class="article_user_delete_link">
+      <div class="article_user_delete_link", id="article_user_delete_link">
         <%= link_to 'DELETE', article_path(@article.id), method: :delete, class: "article_user_delete_path" %>
       </div>
     <% end %>
-      <div class="article_user_top_link">
+      <div class="article_user_top_link", id="article_user_top_link">
         <%= link_to 'TOP', root_path, class: "article_user_top_path" %>
       </div>
-      <div class="article_user_articles_link">
+      <div class="article_user_articles_link", id="article_user_articles_link">
         <%= link_to 'ARTICLES', articles_path, class: "article_user_articles_path" %>
       </div>
   </div>

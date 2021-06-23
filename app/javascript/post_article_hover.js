@@ -1,17 +1,21 @@
 function postArticleHover() {
 
-  if ( document.getElementById('post_article_btn') ) {
+  const arr = ['article_user_edit_link','article_user_delete_link','article_user_top_link','article_user_articles_link','post_article_btn'];
 
-    const postArticleBottun = document.getElementById('post_article_btn');
-    
-    postArticleBottun.addEventListener('mouseover', function() {
-      this.setAttribute("style", "background-color: orange;");
-    });
+  for (const elem of arr) {
+    if ( document.getElementById(elem) ) {
 
-    postArticleBottun.addEventListener('mouseout', function() {
-    this.setAttribute("style", "background-color: lightskyblue;");
-    });
-
+      const targetBottun = document.getElementById(elem);
+      
+      targetBottun.addEventListener('mouseover', function() {
+        this.setAttribute("style", "background-color: orange;");
+      });
+  
+      targetBottun.addEventListener('mouseout', function() {
+      this.setAttribute("style", "background-color: lightskyblue;");
+      });
+  
+    };
   };
 
 };
