@@ -1,0 +1,93 @@
+//ユーザビューアー全体
+.user_viewer_wrap {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  background-color: rgba(41, 47, 51, 0.89);
+}
+
+//画面上部のタイトル
+.user_viewer_profile_title {
+  margin-top: 15px;
+  color: lightskyblue;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+//テーブル全体
+.user_profile_table {
+  color: #FFF;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
+}
+
+//各行
+tr {
+  border: 1px solid white;
+}
+
+//左側の列
+.user_profile_table_title {
+  font-weight: bold;
+  width: 300px;
+  background: #447791;
+}
+
+//右側の列
+th {
+  text-align: center;
+  vertical-align: top;
+  padding: 5px 20px;
+  border: 1px solid white;
+  width: 400px;
+  background: #5893b1;
+}
+
+//プロフィール画像
+.user_viewer_profile_img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+
+//自己紹介文
+.user_viewer_profile {
+  height: 250px;
+  width: 700px;
+  background-color: gray;
+  color: #FFF;
+  margin: 10px auto ;
+  padding: 15px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+//画面下部のボタン集
+.user_viewer_btn_list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px auto;
+}
+
+//各ボタンのルックスを調整
+.user_viewer_signout_btn,
+.user_viewer_edit_btn,
+.user_viewer_retirement_btn,
+.user_viewer_top_btn {
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  background-color: lightskyblue;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

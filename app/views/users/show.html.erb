@@ -1,59 +1,74 @@
-<h1><%= "#{@user.last_name}  #{@user.first_name}  さんのプロフィール" %></h1>
+<%# CSS・・・assets/stylesheets/top/index.scss %>
+<%= render "shared/header" %>
 
-  <div id="name">
-    <% if @user.image.attached? %>
-      <%= image_tag @user.image, class:"user_img" %>
-    <% else %>
-      <%= image_tag "no_image_square.jpg", class:"user_img" %>
+<div class="user_viewer_wrap">
+  <h1 class="user_viewer_profile_title">USER PROFILE</h1>
+
+  <table class="user_profile_table">
+    <tr>
+      <th class="user_profile_table_title">USER NAME</th>
+      <th><%= "#{@user.last_name}  #{@user.first_name}  さん"%></th>
+    </tr>
+
+    <tr>
+      <th class="user_profile_table_title">USER NAME KANA</th>
+      <th><%= "#{@user.last_name_kana}  #{@user.first_name_kana}  さん"%></th>
+    </tr>
+
+    <tr>
+      <th class="user_profile_table_title">GENDER</th>
+      <th><%= @user.sex.name %></th>
+    </tr>
+
+    <tr>
+      <th class="user_profile_table_title">USER IMAGE</th>
+      <th>
+        <% if @user.image.attached? %>
+          <%= image_tag @user.image, class:"user_viewer_profile_img" %>
+        <% else %>
+          <%= image_tag "no_image_square.jpg", class:"user_viewer_profile_img" %>
+        <% end %>
+      </th>
+    </tr>
+    
+    <% if @user.id == current_user.id %>
+    <tr>
+      <th class="user_profile_table_title">ID</th>
+      <th><%= @user.certificate_number %></th>
+    </tr>
+    <tr>
+      <th class="user_profile_table_title">E-MAIL</th>
+      <th><%= @user.email %></th>
+    </tr>
     <% end %>
+
+    <tr>
+      <th class="user_profile_table_title">Department</th>
+      <th><%= @user.department.name %></th>
+    </tr>
+
+    <tr>
+      <th class="user_profile_table_title">POSITION</th>
+      <th><%= @user.position.name %></th>
+    </tr>
+
+  </table>
+
+  <div class="user_viewer_profile"><%= @user.profile %></div>
+
+  <div class="user_viewer_btn_list">
+    <%= button_to 'SIGN_OUT', destroy_user_session_path, method: :delete, :class => "user_viewer_signout_btn", :id => "user_viewer_signout_btn" %>
+    <% if @user == current_user %>
+      <div class="user_viewer_edit_btn", id="user_viewer_edit_btn">
+        <%= link_to "EDIT", edit_user_registration_path %>
+      </div>
+      <div class="user_viewer_retirement_btn", id="user_viewer_retirement_btn">
+        <%= link_to "RETIRE", retirement_path %>
+      </div>
+    <% end %>
+    <div class="user_viewer_top_btn", id="user_viewer_top_btn">
+      <%= link_to "TOP", root_path %>
+    </div>
   </div>
 
-<% if @user.id == current_user.id %>
-  <div id="certificate_number">在籍番号：  
-    <%= @user.certificate_number %>
-  </div>
-
-  <div id="email">メールアドレス：
-    <%= @user.email %>
-  </div>
-<% end %>
-
-  <div id="name">学部・学科：  
-    <%= @user.department.name %>
-  </div>
-
-  <div id="name">氏名：  
-    <%= "#{@user.last_name}  #{@user.first_name}" %>
-  </div>
-
-  <div id="name_kana">ヨミガナ：  
-    <%= "#{@user.last_name_kana}  #{@user.first_name_kana}" %>
-  </div>
-
-  <div id="sex">性別：  
-    <%= @user.sex.name %>
-  </div>
-
-  <div id="position">在籍区分：  
-    <%= @user.position.name %>
-  </div>
-
-  <div id="profile">プロフィール：  
-    <%= @user.profile %>
-  </div>
-
-
-  <%= link_to "ログアウト",destroy_user_session_path %>
-
-<% if @user == current_user %>
-  <div>
-    <%= link_to "編集する", edit_user_registration_path %>
-  </div>
-  <div>
-    <%= link_to "退会する", retirement_path %>
-  </div>
-<% end %>
-
-  <div>
-    <%= link_to "トップページに戻る", root_path %>
-  </div>
+</div>
