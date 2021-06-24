@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
+      binding.pry
       render :show
     else
       render :edit

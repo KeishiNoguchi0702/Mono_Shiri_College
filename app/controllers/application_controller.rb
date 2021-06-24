@@ -30,7 +30,6 @@ class ApplicationController < ActionController::Base
                                              :profile,
                                              :image])
     
-    devise_parameter_sanitizer.permit(:sign_out, keys: [:user_id])
     end
 
 end
