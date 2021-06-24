@@ -1,0 +1,96 @@
+//登録画面全体
+.registration-main {
+  position: absolute;
+  top: 50px;
+  height: 100vw;
+  width: 100%;
+  background-color: rgba(41, 47, 51, 0.89);
+}
+
+//入力ボックス＋タイトルのブロック要素
+.form-group {
+  margin-top: 10px;
+}
+
+//入力欄の名称テキスト部分
+.form-text, .weight-bold-text {
+  color: #FFF;
+  font-weight: bold;
+  margin: 0 450px;
+}
+
+//各種入力欄
+.input-default {
+  width: 500px;
+  height: 30px;
+  margin: 0 0 1px 450px;
+  border-radius: 5px;
+}
+
+//プレイスホルダーの文字色指定
+.input-default::placeholder,
+.input-name::placeholder {
+  color: skyblue;
+}
+
+//  パスワード可視化用のチェックボックス
+.password_field  {
+  margin: 0 0 0 460px;
+  color: #FFF;
+}
+
+//学部・学科選択欄
+.department-select {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+//性別、在籍区分
+.sex-select,.position-select {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+//苗字・名前のセット
+.input-name-wrap {
+  margin: 0 0 10px 450px;
+}
+
+//氏名入力欄（氏名、カナも含みます）
+.input-name {
+  width: 250px;
+  border-radius: 5px;
+}
+
+//プロフィール入力欄
+.input_profile_box {
+  width: 500px;
+  height: 200px;
+  overflow: auto;
+  border-radius: 5px;
+}
+
+//画像アップロードボタンとアップロード画像の領域
+.img-upload {
+  margin: 5px 0 0 450px;
+}
+
+//アップロード画像の表示領域
+img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+//提出ボタン
+.register-red-btn {
+  margin: 30px 0 0 450px;
+  border: none;
+  border-radius: 5px;
+  width: 500px;
+  height: 40px;
+  background-color: lightskyblue;
+  font-weight: bold;
+}

@@ -42,6 +42,9 @@
     <%= @user.profile %>
   </div>
 
+
+  <%= link_to "ログアウト",destroy_user_session_path %>
+
 <% if @user == current_user %>
   <div>
     <%= link_to "編集する", edit_user_registration_path %>
