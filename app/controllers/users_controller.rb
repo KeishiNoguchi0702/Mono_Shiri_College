@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :user_set, only: [:show] #except: [:index]
+  
   #before_action :move_to_index, only: [:destroy]
   
   def index
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def destroy
@@ -16,10 +17,6 @@ class UsersController < ApplicationController
   end
 
   private
-
-  def user_set
-    @user = User.find(params[:id])
-  end
 
   def move_to_index
     redirect_to root_path if current_user.id != @user.id
