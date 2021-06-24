@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/users/registration.scss %>
 <%= render "shared/header" %>
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <h1 class="registration_theme_title">WELCOME TO COLLEGE. PLESE SIGN UP...</h1>
+  <h1 class="registration_theme_title">WELCOME! PLEASE SIGN UP TO LEARN. </h1>
   <%= render "devise/shared/error_messages", model: f.object %>
 
   <%#在籍番号%>
