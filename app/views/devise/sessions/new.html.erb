@@ -1,34 +1,45 @@
-<h2>ログイン</h2>
+<%# CSS・・・assets/stylesheets/users/new_session.scss %>
+<%= render "shared/header" %>
+<div class="user_session_wrap">
+  <h1 class="registration_theme_title">LET'S GO COLLEGE. PLEASE SIGN IN.</h1>
+  <% if notice %>
+    <div class="error-alert">
+      <a class="error_title">!!! Error !!!</a>
+      <p class="alert alert-notice"><%= notice %></p>
+    </div>
+  <% end %>
+  <% if alert %>
+    <div class="error-alert">
+      <a class="error_title">!!! Error !!!</a>
+      <p class="alert alert-error"><%= alert %></p>
+    </div>
+  <% end %>
 
-<% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%#<%= f.label :email %>
+      <%= f.label :E_MAIL, :class => "user_session_email_title" %><br>
+      <%= f.email_field :email,:class => "user_session_email_box", autofocus: true, placeholder: "例）hoge@gmail.com" %>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, placeholder: "例）hoge@gmail.com" %>
-  </div>
+    <div class="field">
+      <%#<%= f.label :password %>
+      <%= f.label :PASS_WORD, :class => "user_session_password_title" %><br>
+      <%= f.password_field :password,:class => "user_session_password_box", id:"password" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, id:"password" %>
-  </div>
+    <div class="password_field">
+      <input type="checkbox" id="password_checkbox_1">
+      <label for="password_checkbox_1">  パスワードを表示する</label>
+    </div>
 
-  <div class="password_field">
-    <input type="checkbox" id="password_checkbox_1">
-    <label for="password_checkbox_1">  パスワードを表示する</label>
-  </div>
+    <div class="log_in">
+      <%= f.submit "SIGN IN", :class => "user_sign_in_btn", :id => "user_sign_in_btn" %>
+    </div>
+  <% end %>
 
-  <div class="log_in">
-    <%= f.submit "ログイン" %>
-  </div>
-<% end %>
-
-<ul>
-  <li><%= link_to 'ユーザ登録', new_user_registration_path, class: "top_path" %></li>
-  <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
-</ul>
+  <ul>
+    <li><%= link_to 'ユーザ登録', new_user_registration_path, class: "top_path" %></li>
+    <li><%= link_to 'トップページに戻る', root_path, class: "top_path" %></li>
+  </ul>
+</div>

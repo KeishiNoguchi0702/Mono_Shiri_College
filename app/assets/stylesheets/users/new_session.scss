@@ -1,0 +1,77 @@
+//エラー画面-----------------------
+.error-alert {
+  box-sizing: border-box;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 0, 255, 0.4);
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 15px;
+  animation: blink 1.5s ease-in-out infinite alternate;
+  width: 650px;
+  margin-left: 375px;
+}
+
+.alert {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.error_title {
+  color: magenta;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 20px;
+}
+
+@keyframes blink {
+  0% {opacity: 0.8;}
+  100% {opacity: 1;}
+}
+
+//入力画面-----------------------
+
+//入力エリア全体
+.user_session_wrap {
+  position: absolute;
+  top: 50px;
+  height: 100vw;
+  width: 100%;
+  background-color: rgba(41, 47, 51, 0.89);
+}
+
+//ボックスタイトルと入力ボックスをまとめた要素
+.field {
+  margin-top: 30px;
+}
+
+//入力ボックスのタイトル
+.user_session_email_title,
+.user_session_password_title {
+  margin-left: 450px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFF;
+}
+
+//入力ボックス
+.user_session_email_box,
+.user_session_password_box {
+  margin-left: 450px;
+  width: 500px;
+  border-radius: 5px;
+  height: 35px;
+}
+
+//メールアドレス入力欄のプレイスホルダー
+.user_session_email_box::placeholder{
+  color: skyblue;
+}
+
+.user_sign_in_btn {
+  margin: 30px 0 10px 450px;
+  border: none;
+  border-radius: 5px;
+  width: 500px;
+  height: 40px;
+  background-color: lightskyblue;
+  font-weight: bold;
+}
