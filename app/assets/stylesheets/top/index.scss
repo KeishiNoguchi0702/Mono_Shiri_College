@@ -11,12 +11,17 @@
 //  z-index: 1;
 //}
 
-#top_video {
-  position: relative;
-  //height: 100%;
+//#top_video {
+//  position: relative;
+//  //height: 100%;
+//  width: 100%;
+//  z-index: -1;
+//}
+
+.video_player {
   width: 100%;
-  z-index: -1;
 }
+
 
 .back_ground {
   position: absolute;
