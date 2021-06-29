@@ -1,16 +1,17 @@
 <%# CSS・・・assets/stylesheets/top/index.scss %>
 <%= render "shared/header" %>
 
-  <p class="title">
-    <span class="slice_mono">Mono</span> 
-    <span class="slice_siri">Siri</span> 
-    <span class="slice_college">College</span>
-  </p>
-
   <div class="video_wrap">
+    
+    <p class="title">
+      <span class="slice_mono">Mono</span> 
+      <span class="slice_siri">Siri</span> 
+      <span class="slice_college">College</span>
+    </p>
+
     <div class="top_video" id="top_video" data-video="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/top_video.mp4">
       <video class="video_player",id="video" src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/top_video.mp4" playsinline="" muted="" loop="" autoplay="" ></video>
-      <div class="back_ground"></div>
+      <div class="back_ground"></div>  
     </div>
     
     <div class="topics">
