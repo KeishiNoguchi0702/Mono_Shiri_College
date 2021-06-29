@@ -18,16 +18,20 @@
 //  z-index: -1;
 //}
 
+//背景動画の要素
 .video_player {
   width: 100%;
+  height: 1080px;
+  object-fit: cover;
 }
 
+//動画のフィルター要素
 .back_ground {
   position: absolute;
   top: 50px;
   background: url(http://www.webcreatorbox.com/sample/images/yokojima.png) repeat 0 0;
   width: 100%;
-  height: 145%;
+  height: calc(100% - 100px);
   z-index: 0;
 }
 
@@ -35,7 +39,7 @@
   animation: blink 2.5s ease-in-out infinite alternate;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #FFF;
-  font-size: 700%;
+  font-size: 112px;
   position: absolute;
   left: 21.5%;
   top: 80px;
