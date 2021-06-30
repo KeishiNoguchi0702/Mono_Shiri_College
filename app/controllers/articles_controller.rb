@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
-  before_action :article_find, only: [:show, :edit, :destroy]
-  before_action :article_new, only: [:new, :update]
+  before_action :article_find, only: [:show, :edit, :update, :destroy]
+  before_action :article_new, only: [:new]
 
   def index
     @articles = Article.includes([:rich_text_content]).order("created_at DESC").page(params[:page]).per(15)
@@ -27,7 +27,6 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      binding.pry
       render :show
     else
       render :edit
@@ -41,7 +40,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title,:content).merge(user_id: current_user.id)
+    params.require(:article).permit(:id, :title, :content).merge(user_id: current_user.id)
   end
 
   def article_find

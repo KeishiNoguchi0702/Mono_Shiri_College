@@ -6,7 +6,7 @@
   <div class="new_article_editor">
     <h1 class="post_title">POST A NEW ARTICLE</h1>
 
-    <%= form_with(model: @article, url: article_path(@article.user_id), local: true) do |f| %>
+    <%= form_with(model: @article, url: article_path(@article.id), local: true) do |f| %>
       <%= render "shared/error_messages", model: f.object %>
 
       <div class="new_article_editor_title", id="article_title">
