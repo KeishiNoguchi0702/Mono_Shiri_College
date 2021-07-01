@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-
   before do
     @article = FactoryBot.build(:article)
   end
@@ -30,5 +29,4 @@ RSpec.describe Article, type: :model do
       end
     end
   end
-
 end

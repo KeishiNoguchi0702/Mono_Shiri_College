@@ -1,10 +1,9 @@
 class Article < ApplicationRecord
-
-  #バリデーション
+  # バリデーション
   validates :title, presence: true
   validate :content_required
 
-  #アソシエーション
+  # アソシエーション
   belongs_to :user
   has_many :article_department_relations
   has_many :departments, through: :article_department_relations
@@ -13,8 +12,8 @@ class Article < ApplicationRecord
   has_rich_text :content
 
   private
-  def content_required
-    errors.add(:content, "を入力してください") unless content.body.present?
-  end
 
+  def content_required
+    errors.add(:content, 'を入力してください') unless content.body.present?
+  end
 end

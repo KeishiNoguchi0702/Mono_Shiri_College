@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :article_new, only: [:new]
 
   def index
-    @articles = Article.includes([:rich_text_content]).order("created_at DESC").page(params[:page]).per(15)
+    @articles = Article.includes([:rich_text_content]).order('created_at DESC').page(params[:page]).per(15)
   end
 
   def show
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      render :show 
+      render :show
     else
       render :new
     end
@@ -50,5 +50,4 @@ class ArticlesController < ApplicationController
   def article_new
     @article = Article.new
   end
-
 end

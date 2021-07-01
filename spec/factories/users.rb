@@ -1,5 +1,4 @@
 FactoryBot.define do
-
   factory :user do
     certificate_number      { Faker::Number.number(digits: 6) }
     email                   { Faker::Internet.email }
@@ -17,6 +16,5 @@ FactoryBot.define do
     after(:build) do |user|
       user.image.attach(io: File.open('app/assets/spectest/ok.png'), filename: 'ok.png')
     end
-
   end
 end
