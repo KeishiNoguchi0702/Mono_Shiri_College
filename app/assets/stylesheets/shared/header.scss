@@ -32,18 +32,17 @@ body {
     display: none;
     background-color: lightskyblue;
   }
+}
 
-  //メニューボタン
-  .top, .news, .articles, .users, .log_in_btn, .sign_in_btn {
-    margin-left: 20px;
-    a {
-      text-decoration: none;
-      text-align: center;
-      font-size: 1.2rem;
-      color: darkslategray;
-    }
+//メニューボタン
+.top, .news, .articles, .users, .sign_in_btn, .sign_up_btn {
+  margin-left: 20px;
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    color: darkslategray;
   }
-
 }
 
 //Twitterロゴ

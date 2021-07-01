@@ -33,11 +33,11 @@
         <% if user_signed_in? %>
           <%= "#{current_user.last_name}  #{current_user.first_name}  さん" %>
         <% else %>
-          <div class="log_in_btn">
-            <%= link_to 'LOG_IN', new_user_session_path, class: "login" %>
-          </div>
           <div class="sign_in_btn">
-            <%= link_to 'SIGN_UP', new_user_registration_path, class: "sign_up" %>
+            <%= link_to 'SIGN_IN', new_user_session_path, class: "sign_in", id:"sign_in" %>
+          </div>
+          <div class="sign_up_btn">
+            <%= link_to 'SIGN_UP', new_user_registration_path, class: "sign_up", id:"sign_up" %>
           </div>
         <% end %>
       </div>
