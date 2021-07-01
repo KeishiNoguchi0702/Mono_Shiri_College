@@ -1,5 +1,4 @@
 $(function(){
-  console.log('ok');
   $('.articles').hover(function(){
       $("ul:not(:animated)", this).slideDown();
   }, function(){
