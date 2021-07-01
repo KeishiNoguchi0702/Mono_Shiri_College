@@ -1,7 +1,17 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
+//ヘッダー全体
 .nav_header {
   position: fixed;
   z-index: 999;
@@ -12,65 +22,63 @@
   background-color: white;
 }
 
-.site_header_logo {
-  height: 50px;
-}
-
 //メニューボタン
 .site_gnav_list {
   display: flex;
   font-weight: bold;
-}
 
-.sub_menu {
-  display: none;
-  background-color: lightskyblue;
-}
-
-.sub_menu ul li a{
-  color: brown;
-}
-
-.top, .news, .articles, .users, .log_in_btn, .sign_in_btn {
-  margin-left: 40px;
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    color: darkslategray;
+  //ドロップダウンメニュ
+  .sub_menu {
+    display: none;
+    background-color: lightskyblue;
   }
+
+  //メニューボタン
+  .top, .news, .articles, .users, .log_in_btn, .sign_in_btn {
+    margin-left: 20px;
+    a {
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2rem;
+      color: darkslategray;
+    }
+  }
+
 }
 
+//Twitterロゴ
+.twitter_logo {
+  margin-left: calc(50vw - 530px) ; //530pxはロゴとメニューボタンリストとTwitterロゴのWidthを半分にした数値の合計値
+}
+
+//ツイーッターロゴとユーザアイコンのサイズ
 img.user_image, img.twitter_logo {
   $length: 40px;
   border-radius: 50%;
   width: $length;
   height: $length;
+  margin-top: 5px;
 }
 
-img.twitter_logo {
-  margin: 5px 200px 0 200px;
-}
-
+//マニューバー右側のユーザデータ
 .user_data {
   display: flex;
   align-items: center;
   position: absolute;
   right: 5px;
-}
 
-.certificate_number {
-  margin: 0 10px 0 10px;
-  color: darkslategray;
-  font-weight: bold;
-}
+  //ID
+  .certificate_number {
+    margin: 0 10px 0 10px;
+    color: darkslategray;
+    font-weight: bold;
+  }
 
-.user_name {
-  display: flex;
-  margin: 0 10px 0 10px;
-  color: darkslategray;
-  font-weight: bold;
-}
-
-img.user_image {
-  margin-top: 5px;
+  //ユーザネーム
+  .user_name {
+    display: flex;
+    margin: 0 10px 0 10px;
+    color: darkslategray;
+    font-weight: bold;
+  }
 }
