@@ -75,11 +75,13 @@
   background-color: #FFF;
 }
 
-.post_article {
+.post_article,
+.update_article {
   margin-top: 20px;
 }
 
-.post_article_btn {
+.post_article_btn,
+.update_article_btn {
   position: absolute;
   left: 38%;
   border: none;
