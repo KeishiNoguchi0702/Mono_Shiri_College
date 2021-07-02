@@ -1,4 +1,4 @@
-//heigtを期待通りの表示にするための記述
+  //heigtを期待通りの表示にするための記述
 html {
   height: 100%;
 }
@@ -70,15 +70,18 @@ body {
   z-index: 2; 
 
   .twitter_emb {
-    position: absolute;
-    top: 20px;
-    left: 50px;
+    //position: absolute;
+    //top: 20px;
+    //left: 50px;
+    margin:20px 0 0 50px;
   }
 
   .new_articles_header {
-    position: absolute;
-    top: 20px;
-    left: 450px;
+    //position: absolute;
+    //top: 20px;
+    //left: 450px;
+    margin: 20px 0 0 50px;
+    padding: 1px;
     height: 43px;
     width: 940px;
     border-radius: 5px 5px 0 0;
