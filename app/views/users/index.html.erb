@@ -8,7 +8,7 @@
   <% @users.each do |user| %>
     <tr class="users_list">
       <th class="users_index_icon">
-      <% if current_user.image.attached? %>
+      <% if user.image.attached? %>
         <%= link_to image_tag(user.image, class:"user_image"), user_path(user.id) %>
       <% else %>
         <%= link_to image_tag("no_image_square.jpg", class:"user_image"), user_path(user.id) %>
@@ -18,8 +18,8 @@
         <%= link_to "#{user.last_name} #{user.first_name}さん", user_path(user.id) %>
       </th>
       <th class="users_index_profile">
-        <% if user.profile.length >= 20%>
-          <%= user.profile.truncate(20) %>
+        <% if user.profile.length >= 30 %>
+          <%= user.profile.truncate(30) %>
         <% else %>
           <%= user.profile %>
         <% end %>
