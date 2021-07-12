@@ -1,10 +1,19 @@
-<h1>ユーザ一覧</h1>
-<% @users.each do |user| %>
-  <li class="user_list">
-    <%= link_to "#{user.last_name} #{user.first_name}さん", user_path(user.id) %>
-  </li>
-<% end %>
+<%# CSS・・・assets/stylesheets/users/index.scss %>
+<%= render "shared/header" %>
+<div class="users_index_wrap">
+  <h1 class="user_viewer_profile_title">USERS INDEX</h1>
+  <% @users.each do |user| %>
+    <div class="users_list">
+      <% if current_user.image.attached? %>
+        <%= link_to image_tag(user.image, class:"user_image"), user_path(user.id) %>
+      <% else %>
+        <%= link_to image_tag("no_image_square.jpg", class:"user_image"), user_path(user.id) %>
+      <% end %>
+      <%= link_to "#{user.last_name} #{user.first_name}さん", user_path(user.id) %>
+    </div>
+  <% end %>
 
-<ul>
-  <li><%= link_to "トップページに戻る", root_path %></li>
-<ul>
+  <ul>
+    <li><%= link_to "トップページに戻る", root_path %></li>
+  <ul>
+</div>
