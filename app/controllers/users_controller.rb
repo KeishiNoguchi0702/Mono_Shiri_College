@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # before_action :move_to_index, only: [:destroy]
 
   def index
-    @users = User.order('certificate_number ASC')
+    @users = User.includes([:image_attachment]).order('certificate_number ASC')
   end
 
   def show
