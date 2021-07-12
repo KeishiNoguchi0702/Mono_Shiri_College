@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 //ユーザ一覧画面全体
 .users_index_wrap {
   position: absolute;
@@ -13,4 +17,32 @@
   font-weight: bold;
   font-size: 50px;
   text-align: center;
+}
+
+//ユーザリストテーブル
+.users_index_profile {
+  margin: 30px auto 0 auto;
+  height: 60px;
+
+  //ユーザアイコン
+  .users_index_icon {
+    width: 50px;
+  }
+
+  //ユーザネーム
+  .users_index_name {
+    width: 250px;
+
+    //ユーザネームのアンカーリンク
+    .users_index_username {
+      text-decoration: none;
+      color: #FFF;
+    }
+  }
+
+  //ユーザプロフィール
+  .users_index_profile {
+    width: 600px;
+  }
+
 }
