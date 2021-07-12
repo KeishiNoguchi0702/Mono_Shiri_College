@@ -15,7 +15,7 @@
       <% end %>
       </th>
       <th class="users_index_name">
-        <%= link_to "#{user.last_name} #{user.first_name}さん", user_path(user.id) %>
+        <%= link_to "#{user.last_name} #{user.first_name}さん", user_path(user.id), :class => "users_index_username" %>
       </th>
       <th class="users_index_profile">
         <% if user.profile.length >= 30 %>
