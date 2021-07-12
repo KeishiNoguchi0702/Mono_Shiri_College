@@ -18,8 +18,8 @@
         <%= link_to "#{user.last_name} #{user.first_name}さん", user_path(user.id), :class => "users_index_username" %>
       </th>
       <th class="users_index_profile">
-        <% if user.profile.length >= 30 %>
-          <%= user.profile.truncate(30) %>
+        <% if user.profile.length >= 100 %>
+          <%= user.profile.truncate(100) %>
         <% else %>
           <%= user.profile %>
         <% end %>
