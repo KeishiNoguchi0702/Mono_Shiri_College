@@ -50,3 +50,25 @@
   }
 
 }
+
+.pagination {
+  width: 30%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: rgba(255, 166, 0, 0.342);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+//全体に適用するように修正予定
+.new_article_title_str {
+  color: skyblue;
+  text-decoration: none;
+  font-weight: bold ;
+}
+
+.current {
+  color: skyblue ;
+  font-weight: bold;
+  font-size: 20px;
+}
