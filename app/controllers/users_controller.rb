@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # before_action :move_to_index, only: [:destroy]
 
   def index
-    @users = User.includes([:image_attachment]).order('certificate_number ASC').page(params[:page]).per(20)
+    @users = User.with_attached_image.order('certificate_number ASC').page(params[:page]).per(20)
   end
 
   def show
