@@ -1,4 +1,4 @@
-  //heigtを期待通りの表示にするための記述
+//heigtを期待通りの表示にするための記述
 html {
   height: 100%;
 }
@@ -40,7 +40,7 @@ body {
 .title {
   animation: blink 2.0s ease-in-out infinite alternate;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 112px;
+  font-size: 7rem;
   position: absolute;
   top: 80px;
   left: calc((100% - 805.469px)/2);
@@ -133,3 +133,13 @@ body {
   }
   
 }
+
+//画面幅1,920px---------------------------------------------------------------
+
+//@media (max-width: 1900px) {
+//  .new_articles_header,
+//  .new_articles_content {
+//    width: 10px;
+
+//  }
+//}
