@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
-  # before_action :move_to_index, only: [:destroy]
-
   def index
     @users = User.with_attached_image.order('certificate_number ASC').page(params[:page]).per(20)
   end
