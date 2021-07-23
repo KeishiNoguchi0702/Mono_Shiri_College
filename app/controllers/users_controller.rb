@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  #ユーザ一覧表示機能
   def index
     @users = User.with_attached_image.order('certificate_number ASC').page(params[:page]).per(20)
   end
