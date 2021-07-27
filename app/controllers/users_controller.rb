@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  #ユーザ退会処理
   def destroy
     @user = User.includes(:articles).find(params[:id])
     render template: 'retirements/done' if @user.destroy
