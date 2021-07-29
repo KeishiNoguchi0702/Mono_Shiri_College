@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   private
 
+  #トップ画面への遷移
   def move_to_index
     redirect_to root_path if current_user.id != @user.id
   end
