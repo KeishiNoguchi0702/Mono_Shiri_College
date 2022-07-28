@@ -55,38 +55,36 @@ https://github.com/KeishiNoguchi0702/Mono_Shiri_College/blob/master/app/models/u
 
 # サンプル画面
 - ユーザ登録
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E7%99%BB%E9%8C%B2.gif" alt="ユーザ登録" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E7%99%BB%E9%8C%B2.gif" alt="ユーザ登録" title="サンプル">
 
 - ユーザ登録バリデーション
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E7%99%BB%E9%8C%B2%E3%83%8F%E3%82%99%E3%83%AA%E3%83%86%E3%82%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.gif" alt="ユーザ登録バリデーション" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E7%99%BB%E9%8C%B2%E3%83%8F%E3%82%99%E3%83%AA%E3%83%86%E3%82%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.gif" alt="ユーザ登録バリデーション" title="サンプル">
 
 - ユーザ一覧表示
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA.gif" alt="ユーザ一覧表示" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA.gif" title="サンプル">
 
 - ユーザ詳細表示
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E8%A9%B3%E7%B4%B0%E8%A1%A8%E7%A4%BA.gif" alt="ユーザ詳細表示" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E8%A9%B3%E7%B4%B0%E8%A1%A8%E7%A4%BA.gif" title="サンプル">
 
 - ユーザ編集
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E7%B7%A8%E9%9B%86%E6%A9%9F%E8%83%BD.gif" alt="ユーザ編集" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E7%B7%A8%E9%9B%86%E6%A9%9F%E8%83%BD.gif" title="サンプル">
 
 - ユーザ削除（退会）
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E9%80%80%E4%BC%9A%E6%A9%9F%E8%83%BD.gif" alt="ユーザ削除" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E3%83%A6%E3%83%BC%E3%82%B5%E3%82%99%E9%80%80%E4%BC%9A%E6%A9%9F%E8%83%BD.gif" alt="ユーザ削除" title="サンプル">
 
 - 記事投稿
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E8%A8%98%E4%BA%8B%E6%8A%95%E7%A8%BF.gif" alt="記事投稿" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E8%A8%98%E4%BA%8B%E6%8A%95%E7%A8%BF.gif" alt="記事投稿" title="サンプル">
 
 - 記事一覧表示
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E8%A8%98%E4%BA%8B%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA.gif" alt="記事一覧表示" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E8%A8%98%E4%BA%8B%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA.gif" alt="記事一覧表示" title="サンプル">
 
 - 記事詳細表示
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E8%A8%98%E4%BA%8B%E8%A9%B3%E7%B4%B0%E8%A1%A8%E7%A4%BA.gif" alt="記事詳細表示" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E8%A8%98%E4%BA%8B%E8%A9%B3%E7%B4%B0%E8%A1%A8%E7%A4%BA.gif" alt="記事詳細表示" title="サンプル">
 
 - 記事削除
-<img src="https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/Sample/%E8%A8%98%E4%BA%8B%E5%89%8A%E9%99%A4.gif" alt="記事削除" title="サンプル">
+<img src="https://mono-siri-college.s3.ap-northeast-1.amazonaws.com/%E8%A8%98%E4%BA%8B%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA.gif" alt="記事削除" title="サンプル">
 
 # 実装予定の機能
-当アプリのヘッダーにもリンクをつけている「ABOUT_US」をご覧ください
-https://mono-shiri-college.s3.ap-northeast-1.amazonaws.com/ABOUT_US.pdf
 
 # 使用言語・技術
 - Ruby2.6.5
